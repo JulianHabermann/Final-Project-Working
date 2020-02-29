@@ -59,3 +59,18 @@ adm_data <- adm_raw %>%
 
 skim(lpr_data)
 ```
+
+# State Department
+
+```{r, echo=FALSE}
+# 
+
+library(tm)
+file <- "raw-data/state_2017.pdf"
+Rpdf <- readPDF(control = list(text = "-layout"))
+corpus <- VCorpus(URISource(file), 
+      readerControl = list(reader = Rpdf))
+corpus.array <- content(content(corpus)[[1]]) %>% 
+  view()
+```
+
