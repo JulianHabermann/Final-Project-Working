@@ -1,0 +1,61 @@
+---
+title: "Data"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(skimr)
+```
+
+```{r, include=FALSE}
+# Data from DHS which is mandated to publicly announce immigration data. Taken from
+# their excel spreadsheets. 
+
+dir.create("raw-data")
+```
+
+# LPR Data
+
+```{r, include=FALSE}
+# I should further clean this data by removing subscripts and totals. Also remember
+# that this data can be easily selected.
+
+lpr_raw <- read_excel("raw-data/lpr_data.xlsx",
+                      range = cell_rows(c(4:92)),
+                      na = "-")
+
+lpr_data <- lpr_raw %>% 
+  clean_names() %>% 
+  remove_empty()
+```
+
+```{r, echo=FALSE}
+# To allow for visualization in the knit. 
+
+skim(lpr_data)
+```
+
+# Admissability
+
+```{r, include=FALSE}
+# Same as above. This data could be easier to pivot into an easier to digest
+# format. 
+
+adm_raw <- read_excel("raw-data/aliens_inadmissable.xlsx",
+                      range = cell_rows(c(3:201)),
+                      na = "-")
+
+adm_data <- adm_raw %>% 
+  clean_names() %>% 
+  remove_empty()
+```
+
+```{r, echo=FALSE}
+# To allow for visualization in the knit. 
+
+skim(lpr_data)
+```
