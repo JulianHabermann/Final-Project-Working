@@ -62,8 +62,8 @@ skim(lpr_data)
 
 # State Department
 
-```{r, echo=FALSE}
-# 
+```{r, include=FALSE}
+# A pdf extraction system that I found online. Doesn't work well. 
 
 library(tm)
 file <- "raw-data/state_2017.pdf"
