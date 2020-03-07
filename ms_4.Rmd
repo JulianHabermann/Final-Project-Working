@@ -1,0 +1,37 @@
+---
+title: "Milestone Data"
+author: "Julian Habermann"
+date: "3/6/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Overview
+
+I have decided to work again out of the repo called Final-Project-Working that is uploaded on my github account publicly. This milestone was largely covered in the about milestone that I created last time, so I reused aspects of my about page to describe my data.
+
+[https://github.com/JulianHabermann/Final-Project-Working.git](https://github.com/JulianHabermann/Final-Project-Working.git)
+
+
+## The Data
+
+This project will analyze admissibility data from immigrants from different countries across different time periods. The purpose of this analysis is to help demonstrate the number of immigrants who are denied from the US every year as well as where they come from.  
+
+In order to create this visualization, I combined multiple DHS public excel files that show the number of ineligibilities from different countries across time periods. Luckily, this data was accessible, relatively clean, and very usable to begin with. This data with additional cleaning is attached in the github link above. 
+
+The second source of data has introduced more complications for my ability to gather. This data set was going to be a separate State Department table of the categories that cause ineligibilities. Luckily, the data for the period of 2009-2018 is all publicly available. The only problem is that I have only been able to find the data as a pdf. For this milestone, I first looked for the data as an excel document, but extensive searching left me empty-handed. Next, I tried to find a method to convert pdfs into data in R. The tools that I found online can only be described as weak for doing this process quickly. 
+
+## Future Plans
+
+For cleaning the admissions data, I feel that it is currently operable to use in a presentation. I cleaned it sufficiently to be able to create visualizations but will clean the data more so that it is presentable as well. Also, I still need to perform some pivots to combine the two data sets that I have already created. 
+
+
+I reached out and emailed the State Department's outreach on immigration, but would be surprised if they responded anytime soon. I also asked my TF about methods to transcribe this data and will work to find a method to convert PDFs effectively. At worst, it would be relatively easy to transcribe the data although time consuming. 
+
+I feel relatively confident in my data as it stands. I could combine a different data source other than the PDFs in order to explain why certain countries were accepted at different periods. For example, I could compare the average income of admitted nations or racial composition. These factors would be interesting to analyze over time. 
+
+I am rather set on continuing this project and most likely will not change my project. 
